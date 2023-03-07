@@ -22,6 +22,7 @@ height:100rem ;
   background-image: url(../assets/tablleroo.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  z-index: -1;
 
 }
 
@@ -37,4 +38,28 @@ height:100rem ;
   75%  {top: 85px}
   100% {top: 100px;}
 
+}
+/*ACA COLOCO MEDIAQUERIES*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  body {
+      background-color:palevioletred;
+  }
+  .fondo {
+      background-image: url(../assets/tablerogame.webp);
+      background-size: cover;
+      width: 400vw;
+      height: 100vh;
+      background-repeat: no-repeat;
+      z-index: 1;
+  
+  }
+  .tableroo{
+    display: none;
+  }
+  @keyframes mariomotion {
+    0%   {top: 15px;left: 0px;}
+  25%  {top: 15px; left: 200px;}
+  75%  {top: 85px}
+  100% {top: 100px;}  
+  }
 }
