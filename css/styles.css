@@ -19,47 +19,135 @@ audio {
 height:100rem ;
 }
 .fondo{
-  background-image: url(../assets/tablleroo.png);
-  background-size: 100%;
+  
+  background-size: 90%;
   background-repeat: no-repeat;
   z-index: -1;
 
 }
-
-
 .pacmanmotion{
   position: relative;
   animation: pacman 4s;
-
+  width: 4vh;
 }
-@keyframes pacman {
-  0%   {top: 15px;left: 0px;}
-  25%  {top: 15px; left: 200px;}
-  75%  {top: 85px}
-  100% {top: 100px;}
-
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+@keyframes pacman {  
+  0%   {top: 40px; left:60px;}
+  25%  {top: 250px; left:60px;}
+ 35%  {top: 250px; left: 200px;}
+ 55% {top: 575px; left: 200px;}
+ 60% {top: 575px; left: 300px; }
+  75%  {top: 500px; left: 300px; }
+ 100%{ top: 500px; left: 400px;}
+}
 }
 /*ACA COLOCO MEDIAQUERIES*/
-@media screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1080px) {
   body {
-      background-color:palevioletred;
+      background-color:royalblue;
   }
   .fondo {
       background-image: url(../assets/tablerogame.webp);
       background-size: cover;
-      width: 400vw;
-      height: 100vh;
+      width: 390vw;
+      height: 50vh;
       background-repeat: no-repeat;
       z-index: 1;
-  
   }
   .tableroo{
     display: none;
   }
-  @keyframes mariomotion {
-    0%   {top: 15px;left: 0px;}
-  25%  {top: 15px; left: 200px;}
-  75%  {top: 85px}
-  100% {top: 100px;}  
+  .pacmanmotion{
+    position: relative;
+    animation: pacman 9s infinite;
+    width: 2px;
   }
+  @keyframes pacman {
+    0%   {top: 0px;}
+  25%  {top: 200px;}
+  75%  {top: 50px}
+  100% {top: 100px;}
+  }
+} 
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  body {
+    background-color:palevioletred;
+}
+.pacmanmotion{
+  position: relative;
+  animation: pacman 9s infinite;
+  width: 3vh;
+  top: 60px;
+  left: 40px;
+}
+.fondo {
+    background-image: url(../assets/laberinto.png);
+    background-size: cover;
+    width: 460vh;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-size: 120%;
+    background-color: palevioletred;
+}
+.tableroo{
+  display: none;
+}
+@keyframes pacman {
+  0%   {top: 60px; left:40px;}
+  25%  {top: 265px; left:40px;}
+ 35%  {top: 265px; left: 180px;}
+  55% {top: 350px; left: 180px;}
+100% {top: 350px; left: 410px; }
+}
+}
+@media screen and (min-width: 1440px) {
+  .pacmanmotion{
+    position: relative;
+    animation: pacman 9s infinite;
+    width: 3vh;
+    top: 40px;
+    left: 60px;
+  }
+    @keyframes pacman {  
+    0%   {top: 40px; left:60px;}
+    25%  {top: 250px; left:60px;}
+   35%  {top: 250px; left: 200px;}
+   55% {top: 575px; left: 200px;}
+   60% {top: 575px; left: 300px; }
+    75%  {top: 500px; left: 300px; }
+   100%{ top: 500px; left: 400px;}
+}
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  body {
+    background-color:rgb(231, 24, 93);
+}
+.pacmanmotion{
+  position: relative;
+  animation: pacman 9s infinite;
+  width: 3vh;
+  top: 30px;
+  left: 10px;
+}
+.fondo {
+    background-image: url(../assets/laberinto.png);
+    background-size: cover;
+    width: 460vh;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-size: 120%;
+    background-color: rgb(221, 34, 96);
+}
+.tableroo{
+  display: none;
+}
+@keyframes pacman {
+  0%   {top: 30px; left:10px;}
+  25%  {top: 163px; left:10px;}
+ 35%  {top: 163px; left: 100px;}
+  55% {top: 208px; left: 100px;}
+100% {top: 208px; left: 250px; }
+}
 }
